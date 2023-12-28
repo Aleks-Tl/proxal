@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <div class="map-wrap">
+        <div class="map-address">
+          <span class="map-address__close"><img src="img/close-map.png" alt=""></span>
+          <h5 class="map-address__title">Armidale Medical Practice</h5>
+          <div class="map-address__team">Team: 5  therapist</div>
+          <div class="map-address__week">4-10 weeks</div>
+        </div>
+        <section id="map" class="js-map">
+        </section>
+      </div>
+      <section class="search-result">
+        <div class="_container">
+          <h2 class="search-result__title title-30">Search Results</h2>
+          <div class="search-result__search search-form">
+            <div class="search-result__select search-result__select_service">
+              <select name="service" id="select-service" class="search-service js-choices">
+                <option value="">Search service...</option>
+                <option value="1">Occupation Therapist</option>
+                <option value="2">Speech Pathologist</option>
+                <option value="3">Physiotherapist</option>
+                <option value="4">Psychologist</option>
+                <option value="5">Dietitian</option>
+                <option value="6">Social worker</option>
+                <option value="7">Behavioural Therapist</option>
+                <option value="8">Exercise Physiologist</option>
+                <option value="9">Podiatrist</option>
+                <option value="10">Osteopath</option>
+                <option value="11">Chiropractor</option>
+              </select>
+            </div>
+            <div class="search-result__select search-result__select_state">
+              <input type="number" placeholder="Postcode" name="postcode">
+            </div>
+            <div class="search-result__select search-result__select_radius">
+              <select name="select-radius" id="select-radius" class="select-radius js-choices">
+                <option value="">Select radius</option>
+                <option value="1">0-2 km</option>
+                <option value="2">Up to 5 km</option>
+                <option value="3">Up to 10 km</option>
+                <option value="4">Any radius</option>
+              </select>
+            </div>
+            <div class="search-result__select search-result__select_business">
+              <select name="select-business" id="select-business" class="select-business js-choices">
+                <option value="">Business capacity</option>
+                <option value="1">0-3 weeks</option>
+                <option value="2">4-10 weeks</option>
+                <option value="3">10+ weeks</option>
+              </select>
+            </div>
+            <button class="search-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <g clip-path="url(#clip0_102_2288)">
+                  <path d="M9.4375 0C5.81894 0 2.875 2.94394 2.875 6.5625C2.875 8.1545 3.44482 9.61591 4.39122 10.7535L0.184566 14.9316C-0.0603401 15.1748 -0.0616838 15.5705 0.181535 15.8154C0.303722 15.9384 0.464347 16 0.625004 16C0.784222 16 0.943504 15.9395 1.06541 15.8184L5.27782 11.6347C6.41088 12.5656 7.8601 13.125 9.4375 13.125C10.5633 13.125 11.6743 12.8349 12.6501 12.2861C12.951 12.1169 13.0577 11.7358 12.8885 11.4349C12.7193 11.1341 12.3383 11.0273 12.0374 11.1966C11.2482 11.6404 10.3492 11.875 9.4375 11.875C6.50819 11.875 4.125 9.49181 4.125 6.5625C4.125 3.63319 6.50819 1.25 9.4375 1.25C12.3668 1.25 14.75 3.63319 14.75 6.5625C14.75 7.48534 14.5099 8.39403 14.0557 9.19034C13.8847 9.49019 13.9891 9.87187 14.2889 10.0429C14.5888 10.2139 14.9705 10.1095 15.1415 9.80969C15.7031 8.825 16 7.70216 16 6.5625C16 2.94394 13.0561 0 9.4375 0Z" fill="white"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_102_2288">
+                    <rect width="16" height="16" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              Search
+            </button>
+          </div>
+          <div class="search-page">
+            <div class="card">
+              <div class="card__items">
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-1.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Mayfield Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="fcard_local">Mayfield</div>
+                    <div class="card__weeks card__green">0-3 weeks</div>
+                  </div>
+                  <p class="card__text">Mayfield Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 5  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM & PM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-2.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Armidale Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Armidale</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Armidale Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 1  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-3.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Broken Hill Medical</h5>
+                  <div class="card__info">
+                    <div class="card__local">Broken Hill</div>
+                    <div class="card__weeks card__red">11+ weeks</div>
+                  </div>
+                  <p class="card__text">Broken Hill Medical supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 10 therapist</div>
+                  <button class="card__btn">Cancellation Opening - PM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-4.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Cessnock Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Cessnock</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Cessnock Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 7  therapist</div>
+                  <button class="card__btn card__disabled">Not Available</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-5.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Mayfield Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="fcard_local">Mayfield</div>
+                    <div class="card__weeks card__green">0-3 weeks</div>
+                  </div>
+                  <p class="card__text">Mayfield Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 5  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM & PM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-6.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Armidale Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Armidale</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Armidale Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 1  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-7.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Broken Hill Medical</h5>
+                  <div class="card__info">
+                    <div class="card__local">Broken Hill</div>
+                    <div class="card__weeks card__red">11+ weeks</div>
+                  </div>
+                  <p class="card__text">Broken Hill Medical supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 10 therapist</div>
+                  <button class="card__btn">Cancellation Opening - PM</button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-8.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Cessnock Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Cessnock</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Cessnock Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 7  therapist</div>
+                  <button class="card__btn card__disabled">Not Available</button>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="search-page__button">Load more results</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+:root {
+
+  // base
+
+  --font-family: "Nunito", sans-serif;
+  --content-width: 1350px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --green-color: #386145;
+  --accent-color: #F47920;
+  --white-color: #fff;
+  --black-color: #000;
+  --dark-color: #17081B;
+  --footer-bg-color: #132017;
+
+
+}

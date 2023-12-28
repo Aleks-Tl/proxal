@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="forms log-in">
+        <div class="_container">
+          <div class="forms__wrap">
+            <div class="forms__form">
+              <h1 class="forms__title title-40">Log In</h1>
+              <form action="#">
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input class="forms__password" type="password" name="password" id="password" placeholder="Password" required>
+                <div class="forms__allows">
+                  <div class="forms__label-box">
+                    <label>
+                      <input type="checkbox" name="forms-accept" class="forms__accept" checked>
+                      <span class="forms__custom-checkbox"></span>
+                      <span class="forms__label">Keep signed in</a></span>
+                    </label>
+                    <a href="#" class="forms__forgot">Forgot password?</a>
+                  </div>
+                </div>
+                <input type="submit" class="forms__btn  btn-accept" value="log In">
+              </form>
+              <div class="forms__have-acc">Don't have an account? <a href="log-in.html">Sign Up</a></div>
+            </div>
+            <div class="forms__img">
+              <img src="img/forms-img.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="forms sign-up">
+        <div class="_container">
+          <div class="forms__wrap">
+            <div class="forms__form">
+              <h1 class="forms__title title-40">Sign Up</h1>
+              <form action="#">
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input class="forms__password" type="password" name="password" id="password" placeholder="Password" required>
+                <input class="forms__password" type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required>
+                <div class="forms__allows">
+                  <div class="forms__label-box">
+                    <label>
+                      <input type="checkbox" name="forms-accept" class="forms__accept" checked>
+                      <span class="forms__custom-checkbox"></span>
+                      <span class="forms__label">I accept the <a href="#">Terms and Conditions</a></span>
+                    </label>
+                  </div>
+                </div>
+                <input type="submit" class="forms__btn  btn-accept" value="Sign Up">
+              </form>
+              <div class="forms__have-acc">Already have an account? <a href="log-in.html">Log In</a></div>
+            </div>
+            <div class="forms__img">
+              <img src="img/forms-img.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

@@ -4,33 +4,33 @@
 @include('partials/head.html')
 
 <body class="page__body">
-  <div class="site-container" style="display: flex; flex-direction: column; justify-content: space-between;">
-    @include('partials/header.html')
+  <div class="site-container">
+    <div class="header-bg">
+      @include('partials/header.html')
+    </div>
     <main class="main">
-      <section class="forms log-in">
+      <h1 class="title-40 title-top">Business registration</h1>
+      <section class="forms business-registration-step-1">
         <div class="_container">
           <div class="forms__wrap">
             <div class="forms__form">
-              <h1 class="forms__title title-40">Log In</h1>
               <form action="#">
+                <input type="text" name="name" id="name" placeholder="Your name" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input class="forms__password" type="password" name="password" id="password" placeholder="Password" required>
+                <input class="forms__password" type="password" name="confirm-password" id="confirm-password" placeholder="Confirm password" required>
                 <div class="forms__allows">
                   <div class="forms__label-box">
                     <label>
                       <input type="checkbox" name="forms-accept" class="forms__accept" checked>
                       <span class="forms__custom-checkbox"></span>
-                      <span class="forms__label">Keep signed in</a></span>
+                      <span class="forms__label">I accept the <a href="#">Terms and Conditions</a></span>
                     </label>
-                    <a href="#" class="forms__forgot">Forgot password?</a>
                   </div>
                 </div>
-                <input type="submit" class="forms__btn  btn-accept" value="log In">
+                <a href="#" class="forms__btn btn-accept">Next</a>
               </form>
-              <div class="forms__have-acc">Don't have an account? <a href="log-in.html">Sign Up</a></div>
-            </div>
-            <div class="forms__img">
-              <img src="img/forms-img.svg" alt="">
+              <div class="forms__have-acc">Already have an account? <a href="log-in.html">Log In</a></div>
             </div>
           </div>
         </div>

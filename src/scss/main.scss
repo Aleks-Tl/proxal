@@ -59,7 +59,7 @@ body {
       display: none;
     }
   }
-  &.business {
+  &.business-login {
     .header {
       background-color: var(--white-color);
     }
@@ -506,7 +506,7 @@ body {
 .hero {
   padding-top: 200px;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center bottom;
   background-size: cover;
   @media (max-width: 992px){
       padding-top: 150px;
@@ -741,6 +741,7 @@ body {
 // Featured section start ========================================================================================================================================================
 
 .featured {
+  background-color: var(--white-color);
   padding-top: 160px;
   padding-bottom: 140px;
   @media (max-width: 992px){
@@ -1047,6 +1048,21 @@ body {
   @media (max-width: 768px){
       padding-top: 60px;
       padding-bottom: 60px;
+  }
+
+  &__business {
+    @media (max-width: 1750px){
+      padding-bottom: 100px !important;
+    }
+    @media (max-width: 1200px){
+        padding-bottom: 80px !important;
+    }
+    @media (max-width: 768px){
+        padding-bottom: 60px !important;
+    }
+    @media (max-width: 576px){
+      padding-bottom: 20px !important;
+  }
   }
 
   // .how-it-works__title
@@ -2499,6 +2515,849 @@ body {
 }
 .sign-up {
 }
+
+// Page user profile start ========================================================================================================================================================
+
+// Section user profile header start ========================================================================================================================================================
+
+.user-profile-header {
+  background-color: #F8FBFA;
+  padding: 40px 0;
+  margin-top: 114px;
+  @media (max-width: 576px){
+      margin-top: 58px;
+  }
+
+  // .user-profile-header__wrap
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 145px;
+    @media (max-width: 1200px){
+        column-gap: 100px;
+    }
+    @media (max-width: 992px){
+        column-gap: 50px;
+    }
+    @media (max-width: 768px){
+        flex-direction: column;
+        row-gap: 40px;
+        text-align: center;
+        //align-items: flex-start;
+    }
+  }
+
+  // .user-profile-header__avatar
+
+  &__avatar {}
+
+  // .user-profile-header__info
+
+  &__info {}
+
+  // .user-profile-header__title
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  // .user-profile-header__list
+
+  &__list {
+    margin-bottom: 35px;
+  }
+
+  // .user-profile-header__box
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    @media (max-width: 1200px){
+        align-items: flex-start;
+    }
+    @media (max-width: 768px){
+        justify-content: flex-start;
+    }
+    @media (max-width: 400px){
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+
+  // .user-profile-header__thead
+
+  &__thead {
+    min-width: 115px;
+    color: var(--black-color);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    @media (max-width: 768px){
+        text-align: left;
+    }
+    @media (max-width: 400px){
+        min-width: auto;
+        text-align: center;
+    }
+    /* @media (max-width: 768px){
+        min-width: auto;
+        font-size: 20px;
+    }
+    @media (max-width: 480px){
+        font-size: 18px;
+        text-align: center;
+        line-height: 130%;
+    } */
+  }
+
+  // .user-profile-header__descr
+
+  &__descr {
+    color: var(--black-color);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    @media (max-width: 768px){
+        text-align: left;
+    }
+    @media (max-width: 400px){
+        text-align: center;
+    }
+    > a {
+      color: var(--black-color);
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // .user-profile-header__btn
+
+  &__btn {
+    display: inline-flex;
+    line-height: 100%;
+    padding: 12px 30px;
+    align-items: center;
+    column-gap: 10px;
+    svg {
+      path {
+        transition: all 0.3s ease 0s;
+      }
+    }
+    &:hover {
+      svg {
+        path {
+          fill: var(--green-color);
+          opacity: 1;
+        }
+      }
+    }
+    @media (max-width: 400px){
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+  .card {
+
+    // .card__item
+
+    &__item {}
+
+    // .card__img
+
+    &__img {
+      @media (max-width: 768px){
+          margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Section user profile header end ========================================================================================================================================================
+
+// Section user profile favorites start ========================================================================================================================================================
+
+.user-profile-favorites {
+  background-color: var(--white-color);
+  padding-top: 90px;
+  padding-bottom: 150px;
+  @media (max-width: 1200px){
+      padding-top: 60px;
+      padding-bottom: 100px;
+  }
+  @media (max-width: 768px){
+     padding-bottom: 60px;
+  }
+
+
+  // .user-profile-favorites__title
+
+  &__title {
+    margin-bottom: 60px;
+    @media (max-width: 1400px){
+        text-align: center;
+    }
+    @media (max-width: 992px){
+        margin-bottom: 40px;
+    }
+  }
+
+  // .user-profile-favorites__wrap
+
+  &__wrap {}
+
+  .card {
+
+    // .card_local
+
+    &_local {}
+
+    // .card__items
+
+    &__items {
+      margin-bottom: 0;
+    }
+
+    // .card__item
+
+    &__item {
+      position: relative;
+    }
+
+    // .card__img
+
+    &__img {}
+
+    // .card__close
+
+    &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      @media (max-width: 700px){
+          top: 10px;
+          right: 10px;
+      }
+    }
+
+    // .card__min-logo
+
+    &__min-logo {}
+
+    // .card__prof
+
+    &__prof {}
+
+    // .card__info
+
+    &__info {}
+
+    // .card__weeks
+
+    &__weeks {}
+
+    // .card__green
+
+    &__green {}
+
+    // .card__text
+
+    &__text {}
+
+    // .card__team
+
+    &__team {}
+
+    // .card__btn
+
+    &__btn {}
+
+    // .card__local
+
+    &__local {}
+
+    // .card__orange
+
+    &__orange {}
+
+    // .card__red
+
+    &__red {}
+
+    // .card__disabled
+
+    &__disabled {}
+  }
+}
+
+// Section user profile favorites end========================================================================================================================================================
+
+// Page user profile end ========================================================================================================================================================
+
+// Page account details start ========================================================================================================================================================
+
+// Section account details start ========================================================================================================================================================
+
+.account-details {
+    padding-top: 80px;
+    padding-bottom: 150px;
+    background-color: var(--white-color);
+    @media (max-width: 768px){
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+		// .account-details__wrap
+
+		&__wrap {
+      display: flex;
+      column-gap: 145px;
+      @media (max-width: 1200px){
+          column-gap: 60px;
+      }
+      @media (max-width: 992px){
+          flex-direction: column;
+          row-gap: 40px;
+      }
+    }
+
+		// .account-details__avatar
+
+		&__avatar {
+      flex: 0 1 315px;
+      max-width: 315px;
+      max-height: 315px;
+      border-radius: 50%;
+      position: relative;
+      @media (max-width: 992px){
+          flex: 0 1 100%;
+          align-self: center;
+      }
+      @media (max-width: 480px){
+        max-width: 250px;
+        max-height: 250px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      label {
+        input {
+          display: none;
+        }
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        background-color: var(--green-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        > img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+		// .account-details__form
+
+		&__form {
+      flex: 0 1 calc(100% - 460px);
+      @media (max-width: 1200px){
+        flex: 0 1 calc(100% - 375px);
+      }
+      @media (max-width: 992px){
+          flex: 0 1 100%;
+      }
+      flex-grow: 1;
+      form {
+        h4 {
+          margin-bottom: 30px;
+        }
+        > div:not(:last-of-type) {
+          margin-bottom: 60px;
+          @media (max-width: 576px){
+              margin-bottom: 40px;
+          }
+        }
+        > div:last-of-type {
+          margin-bottom: 90px;
+          @media (max-width: 576px){
+              margin-bottom: 60px;
+          }
+        }
+        label {
+          display: inline-block;
+          color: var(--black-color);
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+        }
+        input:not([type="submit"], [type="reset"]) {
+          width: 100%;
+          color: var(--black-color);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%;
+          padding: 12px 20px;
+          border-radius: 10px;
+          border: 1px solid #DDD;
+          margin-top: 10px;
+          &::placeholder {
+            color: rgba(0,0,0,0.5);
+          }
+        }
+        input[type="submit"] {
+          padding: 10px 64px;
+          margin-right: 10px;
+          font-size: 18px;
+          @media (max-width: 576px){
+              display: block;
+              margin: 0 auto 15px auto;
+          }
+          @media (max-width: 400px){
+              width: 100%;
+          }
+        }
+        input[type="reset"] {
+          padding: 10px 92px;
+          font-size: 18px;
+          @media (max-width: 576px){
+              display: block;
+              margin: 0 auto;
+          }
+          @media (max-width: 400px){
+            width: 100%;
+          }
+        }
+        input[type="date"] {
+          &::-webkit-calendar-picker-indicator {
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/calendar.svg');
+          }
+        }
+      }
+    }
+
+		// .account-details__personal-info
+
+		&__personal-info {
+      > div:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+      > div {
+        display: flex;
+        column-gap: 30px;
+        justify-content: space-between;
+        @media (max-width: 576px){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+        label {
+            flex-basis: 100%;
+        }
+      }
+    }
+
+		// .account-details__address
+
+		&__address {
+      label {
+        width: 100%;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      > div {
+        display: flex;
+        column-gap: 30px;
+        margin-top: 20px;
+        @media (max-width: 768px){
+            flex-direction: column;
+            row-gap: 20px;
+        }
+      }
+      .choices {
+        margin-top: 10px;
+        //height: 40px;
+      }
+      .choices__inner {
+        line-height: 150%;
+        background-color: var(--white-color);
+        border: 1px solid #DDD;
+        border-radius: 10px;
+        padding: 10px 20px;
+      }
+
+      .choices:after {
+        border: none;
+        background-image: url('../img/arrow--down-search.svg');
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 10px 6px;
+        right: 20px;
+        width: 10px;
+        height: 6px;
+        transition: all 0.3s ease 0s;
+        /* @media (max-width: 768px){
+            top: calc(50% - 8px);
+        }
+        @media (max-width: 400px){
+            right: 15px;
+        } */
+      }
+
+      .choices__list--single {
+        padding: 0;
+      }
+
+      .choices__item {
+        color: var(--dark-color);
+      }
+
+      .choices[data-type*=select-one].is-open::after {
+        transform: rotateX(180deg) translateY(-6px);
+      }
+
+     /*  @media (max-width: 768px){
+        .choices__inner {
+          border: 1px solid #eee;
+          border-radius: 15px !important;
+          margin-bottom: 15px;
+          padding-right: 15px;
+        }
+      } */
+
+      .choices__list--dropdown {
+        border: none;
+        background-color: var(--white-color);
+        top: calc(100% + 10px);
+        border-radius: 15px;
+        z-index: 2;
+        @media (max-width: 768px){
+            top: 100%;
+            outline: 2px solid var(--green-color);
+        }
+      }
+    }
+
+    // .account-details__passwords
+
+		&__passwords {
+      display: flex;
+      column-gap: 30px;
+      @media (max-width: 576px){
+          flex-direction: column;
+          row-gap: 20px;
+      }
+      label {
+        input {
+          margin-top: 0 !important;
+        }
+        width: 100%;
+        > div {
+          margin-top: 10px;
+          position: relative;
+          > span {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/password-hide.svg');
+            &.show {
+              background-image: url('../img/password-show.svg');
+            }
+          }
+        }
+      }
+    }
+}
+
+// Section account details end ========================================================================================================================================================
+
+// Page account details end ========================================================================================================================================================
+
+// Page Proxal business start ========================================================================================================================================================
+
+// Section Business start ========================================================================================================================================================
+
+.business {
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  margin-top: 114px;
+  padding-top: 160px;
+  padding-bottom: 273px;
+  @media (max-width: 1200px){
+      padding-top: 100px;
+      padding-bottom: 150px;
+  }
+  @media (max-width: 768px){
+      padding-bottom: 100px;
+  }
+  @media (max-width: 576px){
+      background-position: right bottom;
+      margin-top: 58px;
+  }
+
+  // .business__wrap
+
+  &__wrap {
+    display: flex;
+    column-gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1200px){
+        column-gap: 40px;
+    }
+    @media (max-width: 992px){
+        flex-direction: column;
+        row-gap: 80px;
+    }
+  }
+
+  // .business__info
+
+  &__info {
+    flex: 0 1 calc(100% - 640px);
+    max-width: 545px;
+    @media (max-width: 1200px){
+      flex: 0 1 calc(50% - 40px);
+    }
+    @media (max-width: 992px){
+        flex: 0 1 100%;
+        max-width: none;
+    }
+    @media (max-width: 576px){
+        text-align: center;
+    }
+  }
+
+  // .business__title
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  // .business__subtitle
+
+  &__subtitle {
+    color: var(--green-color);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+    margin-bottom: 40px;
+    @media (max-width: 480px){
+        font-size: 20px;
+    }
+  }
+
+  // .business__btn
+
+  &__btn {
+    padding: 10px 78px;
+    font-size: 18px;
+  }
+
+  // .business__img
+
+  &__img {
+    flex: 0 1 590px;
+    @media (max-width: 1200px){
+        flex: 0 1 50%;
+    }
+    @media (max-width: 992px){
+        flex: 0 1 100%;
+    }
+  }
+}
+
+// Section Business end ========================================================================================================================================================
+
+// Section what-we-offer start ========================================================================================================================================================
+
+.what-we-offer {
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 180px;
+  padding-bottom: 150px;
+  @media (max-width: 1200px){
+      padding-top: 150px;
+      padding-bottom: 100px;
+  }
+  @media (max-width: 992px){
+      padding-top: 100px;
+  }
+  @media (max-width: 768px){
+      padding-top: 50px;
+      padding-bottom: 60px;
+  }
+
+  // .what-we-offer__wrap
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 65px;
+    @media (max-width: 1200px){
+      column-gap: 50px;
+    }
+    @media (max-width: 992px){
+        flex-direction: column;
+        row-gap: 60px;
+    }
+  }
+
+  // .what-we-offer__img
+
+  &__img {
+    flex: 0 1 625px;
+    img {
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 1200px){
+        flex: 0 1 50%;
+    }
+    @media (max-width: 992px){
+        flex: 0 1 100%;
+    }
+    &:hover {
+      .what-we-offer__square:after {
+        background-color: rgb(49, 70, 56)
+      }
+    }
+  }
+
+  // .what-we-offer__square
+
+  &__square {
+    position: relative;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      width: 480px;
+      height: 440px;
+      background-color: var(--green-color);
+      border-radius: 30px;
+      transition: all 0.3s ease 0s;
+      @media (max-width: 1200px){
+          width: 380px;
+          height: 340px;
+      }
+      @media (max-width: 992px){
+          width: 100%;
+          height: 100%;
+      }
+    }
+  }
+
+  // .what-we-offer__content
+
+  &__content {
+    flex: 0 1 calc(100% - 690px);
+    @media (max-width: 1200px){
+        flex: 0 1 calc(54% - 50px);
+    }
+    @media (max-width: 992px){
+        flex: 0 1 100%;
+    }
+  }
+
+  // .what-we-offer__title
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  // .what-we-offer__text
+
+  &__text {
+    color: var(--black-color);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    &:nth-of-type(1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  // .what-we-offer__btn
+
+  &__btn {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 10px 98px;
+    @media (max-width: 400px){
+        width: 100%;
+        text-align: center;
+    }
+  }
+}
+
+// Section what-we-offer end ========================================================================================================================================================
+
+// Page Proxal business end ========================================================================================================================================================
+
+// Page business registration step 1 start ========================================================================================================================================================
+
+.business-registration-step-1 {
+  margin-top: 0;
+  background-color: var(--white-color);
+  .forms__wrap {
+    justify-content: center;
+  }
+  .forms__form form input:not([type=submit]) {
+    box-shadow: none;
+    border-radius: 15px;
+    border: 1px solid #DDD;
+    background-color: var(--white-color);
+  }
+  .forms__custom-checkbox {
+    border: 1px solid #DDD;
+  }
+
+  a.forms__btn {
+    display: block;
+    margin: 30px auto;
+    font-size: 18px;
+    padding: 10px 85px;
+    max-width: max-content;
+  }
+  .forms__have-acc {
+    text-align: center;
+  }
+}
+
+// Page business registration ste 1 end ========================================================================================================================================================
 
 // Footer start ========================================================================================================================================================
 

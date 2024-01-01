@@ -1036,6 +1036,34 @@ if (document.querySelectorAll('.js-map').length > 0) {
     });
   }
 }
+
+// user-profile-favorites close btn ========================================================================================================================================================
+
+if (document.querySelectorAll('.user-profile-favorites').length > 0) {
+  const userProfileBtns = document.querySelectorAll('.user-profile-favorites .card__close');
+  userProfileBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.card__item').style.display = 'none';
+    });
+  });
+}
+
+// Shows passwords ========================================================================================================================================================
+
+if (document.querySelectorAll('.account-details__passwords').length > 0) {
+  const iconPassword = document.querySelectorAll('.account-details__passwords span');
+  iconPassword.forEach(icon => {
+    icon.addEventListener('click', () => {
+      if (!icon.classList.contains('show')) {
+        icon.classList.add('show');
+        icon.previousElementSibling.setAttribute('type', 'text');
+      } else {
+        icon.classList.remove('show');
+        icon.previousElementSibling.setAttribute('type', 'password');
+      }
+    });
+  });
+}
 })();
 
 /******/ })()

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body logined">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="user-profile-header">
+        <div class="_container">
+          <div class="user-profile-header__wrap">
+            <div class="user-profile-header__avatar">
+              <div class="card__item">
+                <div class="card__img">
+                  <img src="img/user-profile.jpg" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="user-profile-header__info">
+              <h1 class="user-profile-header__title title-40">My profile</h1>
+              <div class="user-profile-header__list">
+                <div class="user-profile-header__box">
+                  <div class="user-profile-header__thead">Name</div>
+                  <p class="user-profile-header__descr">Rachel Pawsey</p>
+                </div>
+                <div class="user-profile-header__box">
+                  <div class="user-profile-header__thead">Email</div>
+                  <p class="user-profile-header__descr"><a href="mailto:Rachel.Pawsey@gmail.com">Rachel.Pawsey@gmail.com</a></p>
+                </div>
+                <div class="user-profile-header__box">
+                  <div class="user-profile-header__thead">Phone</div>
+                  <p class="user-profile-header__descr"><a href="tel:0894542197">(08) 9454 2197</a></p>
+                </div>
+                <div class="user-profile-header__box">
+                  <div class="user-profile-header__thead">Birth Date</div>
+                  <p class="user-profile-header__descr">15.05.1992</p>
+                </div>
+                <div class="user-profile-header__box">
+                  <div class="user-profile-header__thead">Address</div>
+                  <address class="user-profile-header__descr">51 Friar John Way Merewether New South Wales 2480</address>
+                </div>
+              </div>
+              <a href="#" class="user-profile-header__btn btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <g clip-path="url(#clip0_153_1741)">
+                    <g mask="url(#mask0_153_1741)">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0 13.4999C0 14.8806 1.11929 15.9999 2.5 15.9999H13.5C14.8807 15.9999 16 14.8806 16 13.4999V12.8749C16 12.5298 15.7202 12.2499 15.375 12.2499H3.65625C3.31107 12.2499 3.03125 12.5298 3.03125 12.8749C3.03125 13.2201 3.31107 13.4999 3.65625 13.4999L14.75 13.4999C14.75 14.1903 14.1904 14.7499 13.5 14.7499H2.5C1.80965 14.7499 1.25 14.1903 1.25 13.4999V2.49994C1.25 1.80959 1.80965 1.24994 2.5 1.24994H13.5C14.1904 1.24994 14.75 1.80959 14.75 2.49994V9.74994C14.75 10.0951 15.0298 10.3749 15.375 10.3749C15.7202 10.3749 16 10.0951 16 9.74994V2.49994C16 1.11923 14.8807 -6.00815e-05 13.5 -6.00815e-05H2.5C1.11929 -6.00815e-05 0 1.11923 0 2.49994V13.4999Z" fill="white"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.20891 10.8114C3.36808 10.9746 3.60345 11.0382 3.82312 10.9773L6.34577 10.2785C6.44963 10.2497 6.54428 10.1946 6.62054 10.1184L11.0759 5.66955C11.8081 4.93732 11.8081 3.75015 11.0759 3.01792C10.3437 2.28577 9.15664 2.28568 8.42438 3.01774C8.42432 3.0178 8.42426 3.01786 8.4242 3.01792L3.96195 7.47254C3.88914 7.54523 3.83539 7.63477 3.80549 7.73321L3.05824 10.1933C2.992 10.4114 3.04973 10.6483 3.20891 10.8114ZM4.58456 9.4693L4.95599 8.24646L9.30808 3.9018C9.55215 3.65774 9.94786 3.65771 10.192 3.9018C10.436 4.14586 10.4361 4.54152 10.192 4.7856C10.192 4.78562 10.192 4.78565 10.192 4.78567L5.85363 9.11774L4.58456 9.4693Z" fill="white"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3331 5.16742L8.86435 3.69867L7.98047 4.58255L9.44922 6.0513L10.3331 5.16742Z" fill="white"/>
+                    </g>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_153_1741">
+                      <rect width="16" height="16" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+                Edit My Profile
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="user-profile-favorites">
+        <div class="_container">
+          <div class="user-profile-favorites__title title-40">Favorites</div>
+          <div class="user-profile-favorites__wrap">
+            <div class="card">
+              <div class="card__items">
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-1.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Mayfield Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="card_local">Mayfield</div>
+                    <div class="card__weeks card__green">0-3 weeks</div>
+                  </div>
+                  <p class="card__text">Mayfield Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 5  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM & PM</button>
+                  <button class="card__close"><img src="img/close-modal.svg" alt=""></button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-2.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Armidale Medical Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Armidale</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Armidale Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 1  therapist</div>
+                  <button class="card__btn">Cancellation Opening - AM</button>
+                  <button class="card__close"><img src="img/close-modal.svg" alt=""></button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-3.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Broken Hill Medical</h5>
+                  <div class="card__info">
+                    <div class="card__local">Broken Hill</div>
+                    <div class="card__weeks card__red">11+ weeks</div>
+                  </div>
+                  <p class="card__text">Broken Hill Medical supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 10 therapist</div>
+                  <button class="card__btn">Cancellation Opening - PM</button>
+                  <button class="card__close"><img src="img/close-modal.svg" alt=""></button>
+                </div>
+
+                <div class="card__item">
+                  <div class="card__img">
+                    <img src="img/featured-img-4.jpg" alt="">
+                    <div class="card__min-logo">
+                      <img src="img/_logo.png" alt="">
+                    </div>
+                  </div>
+                  <h5 class="card__prof">Cessnock Practice</h5>
+                  <div class="card__info">
+                    <div class="card__local">Cessnock</div>
+                    <div class="card__weeks card__orange">4-10 weeks</div>
+                  </div>
+                  <p class="card__text">Cessnock Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
+                  <div class="card__team">Team: 7  therapist</div>
+                  <button class="card__btn card__disabled">Not Available</button>
+                  <button class="card__close"><img src="img/close-modal.svg" alt=""></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section class="business-team">
+        <div class="_container">
+          <h2 class="business-team__title title-40">Team</h2>
+          <div class="business-team__wrap">
+            <div class="card__items">
+              <div class="card__item">
+                <div class="card__img">
+                  <img src="img/featured-img-1.jpg" alt="">
+                  <div class="card__min-logo">
+                    <img src="img/_logo.png" alt="">
+                  </div>
+                </div>
+                <h5 class="card__prof">Jack Peart</h5>
+                <div class="card__text">Therapist</div>
+              </div>
+
+              <div class="card__item">
+                <div class="card__img">
+                  <img src="img/featured-img-2.jpg" alt="">
+                  <div class="card__min-logo">
+                    <img src="img/_logo.png" alt="">
+                  </div>
+                </div>
+                <h5 class="card__prof">Daniel Jaques</h5>
+                <div class="card__text">Therapist</div>
+              </div>
+
+              <div class="card__item">
+                <div class="card__img">
+                  <img src="img/featured-img-3.jpg" alt="">
+                  <div class="card__min-logo">
+                    <img src="img/_logo.png" alt="">
+                  </div>
+                </div>
+                <h5 class="card__prof">Alice Yip</h5>
+                <div class="card__text">Therapist</div>
+              </div>
+
+              <div class="card__item">
+                <div class="card__img">
+                  <img src="img/featured-img-4.jpg" alt="">
+                  <div class="card__min-logo">
+                    <img src="img/_logo.png" alt="">
+                  </div>
+                </div>
+                <h5 class="card__prof">Zoe Chandler</h5>
+                <div class="card__text">Therapist</div>
+              </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

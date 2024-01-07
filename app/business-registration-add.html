@@ -19,8 +19,9 @@
 </head>
 
 <body class="page__body">
-  <div class="site-container">
-    <header class="header fixed-block">
+  <div class="site-container" style="display: flex; flex-direction: column; justify-content: space-between;">
+    <div class="header-bg">
+      <header class="header fixed-block">
   <div class="header__wrap">
     <a href="#" class="header__logo">
       <img src="img/logo.svg" alt="">
@@ -280,218 +281,17 @@
   </div>
 </header>
 
+    </div>
     <main class="main">
-      <section class="hero" style="background-image: url('img/backing-bottom.png')">
+      <h1 class="title-40 title-top">Business registration</h1>
+      <section class="business-registration-add">
         <div class="_container">
-          <div class="hero__wrap">
-            <h2 class="title-54">
-              <p>Finding the right therapist should be easy…</p>
-              <p>It is now</p>
-            </h2>
-            <p class="hero__subtitle title-30">Search for local availability here</p>
-            <div class="hero__search search-form">
-              <div class="hero__select">
-                <select name="service" id="select-service" class="search-service js-choices">
-                  <option value="">Search service…</option>
-                  <option value="1">Occupation Therapist</option>
-                  <option value="2">Speech Pathologist</option>
-                  <option value="3">Physiotherapist</option>
-                  <option value="4">Psychologist</option>
-                  <option value="5">Dietitian</option>
-                  <option value="6">Social worker</option>
-                  <option value="7">Behavioural Therapist</option>
-                  <option value="8">Exercise Physiologist</option>
-                  <option value="9">Podiatrist</option>
-                  <option value="10">Osteopath</option>
-                  <option value="11">Chiropractor</option>
-                </select>
-              </div>
-              <div class="hero__select">
-                <select name="state" id="state" class="search-state js-choices">
-                  <option value="">State</option>
-                  <option value="1">Sydney</option>
-                  <option value="2">Melbourne</option>
-                  <option value="3">Brisbane</option>
-                  <option value="4">Brisbane</option>
-                  <option value="5">Adelaide</option>
-                  <option value="6">Gold Coast</option>
-                  <option value="7">Cranbourne</option>
-                  <option value="8">Canberra</option>
-                  <option value="9">Central Coast</option>
-                  <option value="10">Wollongong</option>
-                  <option value="11">Sydney</option>
-                  <option value="12">Melbourne</option>
-                  <option value="13">Brisbane</option>
-                  <option value="14">Brisbane</option>
-                  <option value="15">Adelaide</option>
-                  <option value="16">Gold Coast</option>
-                  <option value="17">Cranbourne</option>
-                  <option value="18">Canberra</option>
-                  <option value="19">Central Coast</option>
-                  <option value="20">Wollongong</option>
-                </select>
-              </div>
-              <button class="search-btn" data-graph-path="search">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <g clip-path="url(#clip0_102_2288)">
-                    <path d="M9.4375 0C5.81894 0 2.875 2.94394 2.875 6.5625C2.875 8.1545 3.44482 9.61591 4.39122 10.7535L0.184566 14.9316C-0.0603401 15.1748 -0.0616838 15.5705 0.181535 15.8154C0.303722 15.9384 0.464347 16 0.625004 16C0.784222 16 0.943504 15.9395 1.06541 15.8184L5.27782 11.6347C6.41088 12.5656 7.8601 13.125 9.4375 13.125C10.5633 13.125 11.6743 12.8349 12.6501 12.2861C12.951 12.1169 13.0577 11.7358 12.8885 11.4349C12.7193 11.1341 12.3383 11.0273 12.0374 11.1966C11.2482 11.6404 10.3492 11.875 9.4375 11.875C6.50819 11.875 4.125 9.49181 4.125 6.5625C4.125 3.63319 6.50819 1.25 9.4375 1.25C12.3668 1.25 14.75 3.63319 14.75 6.5625C14.75 7.48534 14.5099 8.39403 14.0557 9.19034C13.8847 9.49019 13.9891 9.87187 14.2889 10.0429C14.5888 10.2139 14.9705 10.1095 15.1415 9.80969C15.7031 8.825 16 7.70216 16 6.5625C16 2.94394 13.0561 0 9.4375 0Z" fill="white"/>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_102_2288">
-                      <rect width="16" height="16" fill="white"/>
-                    </clipPath>
-                  </defs>
-                </svg>
-                Search
-              </button>
-            </div>
-            <h1 class="hero__title">Health, made easy!</h1>
-            <img class="hero__img" src="img/hero-img.svg" alt="">
-          </div>
-        </div>
-      </section>
-      <section class="featured">
-        <div class="_container">
-          <h3 class="featured__title title-40">Featured Businesses</h3>
-          <div class="card">
-            <div class="card__items">
-              <div class="card__item">
-                <div class="card__img">
-                  <img src="img/featured-img-1.jpg" alt="">
-                  <div class="card__min-logo">
-                    <img src="img/_logo.png" alt="">
-                  </div>
-                </div>
-                <h5 class="card__prof">Mayfield Medical Practice</h5>
-                <div class="card__info">
-                  <div class="card_local">Mayfield</div>
-                  <div class="card__weeks card__green">0-3 weeks</div>
-                </div>
-                <p class="card__text">Mayfield Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
-                <div class="card__team">Team: 5 therapist</div>
-                <button class="card__btn">Cancellation Opening — AM & PM</button>
-              </div>
-
-              <div class="card__item">
-                <div class="card__img">
-                  <img src="img/featured-img-2.jpg" alt="">
-                  <div class="card__min-logo">
-                    <img src="img/_logo.png" alt="">
-                  </div>
-                </div>
-                <h5 class="card__prof">Armidale Medical Practice</h5>
-                <div class="card__info">
-                  <div class="card__local">Armidale</div>
-                  <div class="card__weeks card__orange">4-10 weeks</div>
-                </div>
-                <p class="card__text">Armidale Medical Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
-                <div class="card__team">Team: 1 therapist</div>
-                <button class="card__btn">Cancellation Opening — AM</button>
-              </div>
-
-              <div class="card__item">
-                <div class="card__img">
-                  <img src="img/featured-img-3.jpg" alt="">
-                  <div class="card__min-logo">
-                    <img src="img/_logo.png" alt="">
-                  </div>
-                </div>
-                <h5 class="card__prof">Broken Hill Medical</h5>
-                <div class="card__info">
-                  <div class="card__local">Broken Hill</div>
-                  <div class="card__weeks card__red">11+ weeks</div>
-                </div>
-                <p class="card__text">Broken Hill Medical supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
-                <div class="card__team">Team: 10 therapist</div>
-                <button class="card__btn">Cancellation Opening — PM</button>
-              </div>
-
-              <div class="card__item">
-                <div class="card__img">
-                  <img src="img/featured-img-4.jpg" alt="">
-                  <div class="card__min-logo">
-                    <img src="img/_logo.png" alt="">
-                  </div>
-                </div>
-                <h5 class="card__prof">Cessnock Practice</h5>
-                <div class="card__info">
-                  <div class="card__local">Cessnock</div>
-                  <div class="card__weeks card__orange">4-10 weeks</div>
-                </div>
-                <p class="card__text">Cessnock Connection supports the practice of GPs and practitioners providing allied and complementary health including psychology, pathology collection services, nutrition, naturopathy and herbalism.</p>
-                <div class="card__team">Team: 7 therapist</div>
-                <button class="card__btn card__disabled">Not Available</button>
-              </div>
-            </div>
-          </div>
-          <a href="#" class="featured__button">Join Us</a>
-        </div>
-      </section>
-      <section class="how-it-works" style="background-image: url('img/how-it-works-backing.png')">
-        <div class="_container">
-          <h2 class="how-it-works__title title-40">How it works</h2>
-          <div class="how-it-works__block">
-            <div class="how-it-works__item">
-              <div class="how-it-works__img">
-                <img src="img/how-it-works-img-1.svg" alt="">
-              </div>
-              <div class="how-it-works__content">
-                <h4 class="how-it-works__name title-30">Get matched to the best therapist for you</h4>
-                <p class="how-it-works__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut fermentum nibh, sed ornare velit. Maecenas non vulputate sem. Curabitur at enim id tellus sollicitudin rutrum porta gravida nisl. Aenean luctus arcu eros, id sollicitudin diam luctus ut. Aliquam facilisis volutpat quam. Nam porta varius ultrices. Cras vel fermentum massa, vel tincidunt est. Curabitur ornare urna a odio dapibus hendrerit.</p>
-              </div>
-            </div>
-            <div class="how-it-works__item">
-              <div class="how-it-works__img">
-                <img src="img/how-it-works-img-2.svg" alt="">
-              </div>
-              <div class="how-it-works__content">
-                <h4 class="how-it-works__name title-30">Communicate your way</h4>
-                <p class="how-it-works__text">Praesent ut fermentum nibh, sed ornare velit. Maecenas non vulputate sem. Curabitur at enim id tellus sollicitudin rutrum porta gravida nisl. Aenean luctus arcu eros, id sollicitudin diam luctus ut. Aliquam facilisis volutpat quam. Nam porta varius ultrices. Cras vel fermentum massa, vel tincidunt est. Curabitur ornare urna a odio dapibus hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
-              <img src="img/Stroke-right.svg" alt="" class="how-it-works__stroke-right">
-              <img src="img/Stroke-left.svg" alt="" class="how-it-works__stroke-left">
-            </div>
-            <div class="how-it-works__item">
-              <div class="how-it-works__img">
-                <img src="img/how-it-works-img-3.svg" alt="">
-              </div>
-              <div class="how-it-works__content">
-                <h4 class="how-it-works__name title-30">Therapy when you need it</h4>
-                <p class="how-it-works__text">Curabitur at enim id tellus sollicitudin rutrum porta gravida nisl. Aenean luctus arcu eros, id sollicitudin diam luctus ut. Aliquam facilisis volutpat quam. Nam porta varius ultrices. Cras vel fermentum massa, vel tincidunt est. Curabitur ornare urna a odio dapibus hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut fermentum nibh, sed ornare velit. Maecenas non vulputate sem.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="goal">
-        <div class="_container">
-          <div class="goal__wrap">
-            <div class="goal__item">
-              <div class="goal__img">
-                <div class="goal__img-wrap">
-                  <img src="img/index-img-1.jpg" alt="">
-                </div>
-              </div>
-              <div class="goal__content">
-                <h5 class="goal__title title-40">What is our goal</h5>
-                <div class="goal__descr">
-                  <p class="goal__text">Curabitur pretium ligula feugiat eros placerat, quis vehicula neque luctus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin sed ante posuere, accumsan dui ut, ullamcorper diam. Nulla eget magna id ex luctus hendrerit eu in sapien. Donec augue tortor, venenatis sed accumsan bibendum, facilisis vitae lorem. Morbi et eleifend nulla.</p>
-                  <p class="goal__text">Pellentesque gravida venenatis risus, vel posuere purus iaculis ac. Vivamus sollicitudin felis eget risus efficitur consectetur. Duis aliquam mauris vel tempor mollis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis, orci ac suscipit sollicitudin, leo leo efficitur justo, et consectetur dolor orci et felis. Cras vel libero porttitor, finibus nunc vel, laoreet nibh. Sed tempor erat nulla, eu varius ante tincidunt sit amet.</p>
-                </div>
-              </div>
-            </div>
-            <div class="goal__item">
-              <div class="goal__img">
-                <div class="goal__img-wrap">
-                  <img src="img/index-img-2.jpg" alt="">
-                </div>
-              </div>
-              <div class="goal__content">
-                <h5 class="goal__title title-40">Who we are</h5>
-                <div class="goal__descr">
-                  <p class="goal__text">Integer diam justo, rhoncus ultrices quam at, vehicula suscipit felis. Pellentesque risus sem, lobortis ac dapibus fermentum, egestas at ante. Proin laoreet, dolor a consequat porta, velit leo lobortis dolor, id fringilla tellus elit vitae odio. Integer vitae mollis nulla. Sed at interdum libero. Nulla lectus mauris, congue sed iaculis at, efficitur ac tortor. Phasellus dignissim ullamcorper venenatis. Nullam id velit non velit varius semper sit amet et enim. Cras sollicitudin malesuada consequat. Donec nec neque vel nisi sagittis facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras ac placerat turpis. Proin facilisis, ex vitae ultrices viverra, turpis mauris fringilla tellus, non imperdiet dui risus eu lacus. Maecenas sollicitudin lectus ut risus auctor, et imperdiet libero facilisis. Pellentesque dapibus in est quis iaculis.</p>
-                </div>
-              </div>
+          <div class="business-registration-add__wrap">
+            <h3 class="business-registration-add__title title-30">Would you like to add another service?</h3>
+            <div class="business-registration-add__btns">
+              <a href="#" class="btn-cancel">Back to previous step</a>
+              <a href="#" class="btn-accept">Yes, add another service</a>
+              <a href="#" class="btn-accept">No, next step</a>
             </div>
           </div>
         </div>

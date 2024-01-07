@@ -1064,6 +1064,17 @@ if (document.querySelectorAll('.account-details__passwords').length > 0) {
     });
   });
 }
+
+// Verifications and registrations display none images ========================================================================================================================================================
+
+if (document.querySelectorAll('.business-form__verifications-brands').length > 0) {
+  const closeBtns = document.querySelectorAll('.business-form__verifications-brands-item button');
+  closeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.closest('.business-form__verifications-brands-item').style.display = 'none';
+    });
+  });
+}
 })();
 
 /******/ })()

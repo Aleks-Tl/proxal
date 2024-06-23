@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body business-login">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="title-40 title-top">My Services</h1>
+      <section class="my-service">
+        <div class="_container">
+          <div class="my-service__wrap">
+            <div class="tab my-service__tab">
+              <h5 class="title-24">My Services</h5>
+              <button class="tab__links" data-tab="tab-1">Occupation Therapist</button>
+              <button class="tab__links" data-tab="tab-2">Social Worker</button>
+              <button class="tab__links" data-tab="tab-3">Behavioural Therapist</button>
+              <button class="my-service__add-service btn-accept">Add new service</button>
+            </div>
+
+            <div class="tab__contents my-service__contents">
+              <div id="tab-1" class="tab__content">
+                <h5 class="title-24 my-service__title">Occupation Therapist</h5>
+                <div class="my-service__range">
+                  <span>Waitlist length to see your service - weeks</span>
+                  <input type="text" id="range_slider_1" class="range_slider" />
+                 </div>
+
+                <div class="my-service__availables">
+                  <span>Cancelation by advertising availabiliry</span>
+                  <div class="my-service__available">
+                    <input type="radio" id="not-available" name="available">
+                    <label for="not-available">Not Available</label>
+                    <input type="radio" id="am-pm" name="available" checked>
+                    <label for="am-pm">Cancellation Opening - AM & PM</label>
+                    <input type="radio" id="am" name="available">
+                    <label for="am">Cancellation Opening - AM</label>
+                    <input type="radio" id="pm" name="available">
+                    <label for="pm">Cancellation Opening - PM</label>
+                  </div>
+                  <div class="countdown-timer-container">
+                    <div class="countdown-timer">
+                      <div class="timer">
+                        00:00
+                      </div>
+                      <div class="circle-container">
+                        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                         <circle  r="20" cy="25" cx="25" stroke-width="4" stroke='#EEEEEE' fill="none"/>
+                         <circle class="circle_animation" r="20" cy="25" cx="25" stroke="#F47920" stroke-width="4" fill="transparent"
+                         stroke-dasharray="125.66" stroke-dashoffset="0"
+                         id="circle" />
+                       </svg>
+                      </div>
+                    </div>
+                    <div class="countdown-description">Your cancellation status will be active within 48 hours. <br> After that it will automatically change to “Not Available”</div>
+                   </div>
+                </div>
+
+                <form action="" class="my-service__form">
+                  <div class="my-service__block">
+                    <p>Additional services currently accessible through your service</p>
+                    <ul>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="business-form__block business-form__clinician-details my-service__clinician-details">
+                    <h4 class="business-form__title title-24">Clinician details</h4>
+                    <p>Edit if required (increasing/decreasing number of clinicians will impact on billing)</p>
+                    <div class="business-form__info-wrap">
+                      <div class="business-form__avatar">
+                        <img src="img/user-business.jpg" alt="">
+                        <label>
+                          <input type="file" name="edit" id="edit">
+                          <img src="img/download-icon.svg" alt="">
+                        </label>
+                      </div>
+                      <div class="business-form__info-inputs">
+                        <label>Name
+                          <input type="text" name="myServiceName" id="my-service-name" placeholder="Service Name" required>
+                        </label>
+                        <label>Registration of practice number
+                          <input type="text" name="MyServiceNumber" id="my-service-number" placeholder="Registration of practice number" required>
+                        </label>
+                      </div>
+                    </div>
+                    <a href="#" class="business-form__clinician-details-btn btn">Add more clinician</a>
+                  </div>
+
+                  <div class="my-service__btns">
+                    <input type="submit" class="btn-accept" value="Save changes">
+                    <input type="reset" class="btn-cancel" value="Cancel">
+                  </div>
+                </form>
+              </div>
+
+              <div id="tab-2" class="tab__content">
+                <h5 class="title-24 my-service__title">Social Worker</h5>
+                <div class="my-service__range">
+                  <span>Waitlist length to see your service - weeks</span>
+                  <input type="text" id="range_slider_2" class="range_slider" />
+                 </div>
+
+                <div class="my-service__availables">
+                  <span>Cancelation by advertising availabiliry</span>
+                  <div class="my-service__available">
+                    <input type="radio" id="not-available-1" name="available-1" checked>
+                    <label for="not-available-1">Not Available</label>
+                    <input type="radio" id="am-pm-1" name="available-1">
+                    <label for="am-pm-1">Cancellation Opening - AM & PM</label>
+                    <input type="radio" id="am-1" name="available-1">
+                    <label for="am-1">Cancellation Opening - AM</label>
+                    <input type="radio" id="pm-1" name="available-1">
+                    <label for="pm-1">Cancellation Opening - PM</label>
+                  </div>
+                  <div class="countdown-timer-container">
+                    <div class="countdown-timer">
+                      <div class="timer">
+                        00:00
+                      </div>
+                      <div class="circle-container">
+                        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                         <circle  r="20" cy="25" cx="25" stroke-width="4" stroke='#EEEEEE' fill="none"/>
+                         <circle class="circle_animation" r="20" cy="25" cx="25" stroke="#F47920" stroke-width="4" fill="transparent"
+                         stroke-dasharray="125.66" stroke-dashoffset="0"
+                         id="circle" />
+                       </svg>
+                      </div>
+                    </div>
+                    <div class="countdown-description">Your cancellation status will be active within 48 hours. <br> After that it will automatically change to “Not Available”</div>
+                   </div>
+                </div>
+
+                <form action="" class="my-service__form">
+                  <div class="my-service__block">
+                    <p>Additional services currently accessible through your service</p>
+                    <ul>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="business-form__block business-form__clinician-details my-service__clinician-details">
+                    <h4 class="business-form__title title-24">Clinician details</h4>
+                    <p>Edit if required (increasing/decreasing number of clinicians will impact on billing)</p>
+                    <div class="business-form__info-wrap">
+                      <div class="business-form__avatar">
+                        <img src="img/user-business.jpg" alt="">
+                        <label>
+                          <input type="file" name="edit" id="edit">
+                          <img src="img/download-icon.svg" alt="">
+                        </label>
+                      </div>
+                      <div class="business-form__info-inputs">
+                        <label>Name
+                          <input type="text" name="myServiceName" id="my-service-name" placeholder="Service Name" required>
+                        </label>
+                        <label>Registration of practice number
+                          <input type="text" name="MyServiceNumber" id="my-service-number" placeholder="Registration of practice number" required>
+                        </label>
+                      </div>
+                    </div>
+                    <a href="#" class="business-form__clinician-details-btn btn">Add more clinician</a>
+                  </div>
+
+                  <div class="my-service__btns">
+                    <input type="submit" class="btn-accept" value="Save changes">
+                    <input type="reset" class="btn-cancel" value="Cancel">
+                  </div>
+                </form>
+              </div>
+
+              <div id="tab-3" class="tab__content">
+                <h5 class="title-24 my-service__title">Behavioural Therapist</h5>
+                <div class="my-service__range">
+                  <span>Waitlist length to see your service - weeks</span>
+                  <input type="text" id="range_slider_3" class="range_slider" />
+                 </div>
+
+                <div class="my-service__availables">
+                  <span>Cancelation by advertising availabiliry</span>
+                  <div class="my-service__available">
+                    <input type="radio" id="not-available-2" name="available-3">
+                    <label for="not-available-2">Not Available</label>
+                    <input type="radio" id="am-pm-2" name="available-3">
+                    <label for="am-pm-2">Cancellation Opening - AM & PM</label>
+                    <input type="radio" id="am-2" name="available-3" checked>
+                    <label for="am-2">Cancellation Opening - AM</label>
+                    <input type="radio" id="pm-2" name="available-3">
+                    <label for="pm-2">Cancellation Opening - PM</label>
+                  </div>
+                  <div class="countdown-timer-container">
+                    <div class="countdown-timer">
+                      <div class="timer">
+                        00:00
+                      </div>
+                      <div class="circle-container">
+                        <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                         <circle  r="20" cy="25" cx="25" stroke-width="4" stroke='#EEEEEE' fill="none"/>
+                         <circle class="circle_animation" r="20" cy="25" cx="25" stroke="#F47920" stroke-width="4" fill="transparent"
+                         stroke-dasharray="125.66" stroke-dashoffset="0"
+                         id="circle" />
+                       </svg>
+                      </div>
+                    </div>
+                    <div class="countdown-description">Your cancellation status will be active within 48 hours. <br> After that it will automatically change to “Not Available”</div>
+                   </div>
+                </div>
+
+                <form action="" class="my-service__form">
+                  <div class="my-service__block">
+                    <p>Additional services currently accessible through your service</p>
+                    <ul>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox" checked>
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Assessment & reports</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Diagnostics</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="forms__label-box">
+                          <label>
+                            <input type="checkbox" name="forms-accept" class="my-service__checkbox">
+                            <span class="forms__custom-checkbox"></span>
+                            <span class="forms__label">Screeners</a></span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="business-form__block business-form__clinician-details my-service__clinician-details">
+                    <h4 class="business-form__title title-24">Clinician details</h4>
+                    <p>Edit if required (increasing/decreasing number of clinicians will impact on billing)</p>
+                    <div class="business-form__info-wrap">
+                      <div class="business-form__avatar">
+                        <img src="img/user-business.jpg" alt="">
+                        <label>
+                          <input type="file" name="edit" id="edit">
+                          <img src="img/download-icon.svg" alt="">
+                        </label>
+                      </div>
+                      <div class="business-form__info-inputs">
+                        <label>Name
+                          <input type="text" name="myServiceName" id="my-service-name" placeholder="Service Name" required>
+                        </label>
+                        <label>Registration of practice number
+                          <input type="text" name="MyServiceNumber" id="my-service-number" placeholder="Registration of practice number" required>
+                        </label>
+                      </div>
+                    </div>
+                    <a href="#" class="business-form__clinician-details-btn btn">Add more clinician</a>
+                  </div>
+
+                  <div class="my-service__btns">
+                    <input type="submit" class="btn-accept" value="Save changes">
+                    <input type="reset" class="btn-cancel" value="Cancel">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

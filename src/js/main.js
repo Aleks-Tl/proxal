@@ -3,6 +3,10 @@ import vars from './_vars';
 import './_functions';
 import './_components';
 
+// Tippy ========================================================================================================================================================
+
+import tippy from 'tippy.js';
+
 // Fixed header ========================================================================================================================================================
 
 const header = document.querySelector('.header');
@@ -365,3 +369,243 @@ if (document.querySelectorAll('.business-form__verifications-brands').length > 0
     })
   })
 }
+
+// Style outline for radio buttons ========================================================================================================================================================
+
+if (document.querySelectorAll('.checkout__radio').length > 0) {
+  const inputsRadio = document.querySelectorAll('.checkout__label');
+
+  for (let i = 0; i < inputsRadio.length; i++) {
+    inputsRadio[i].addEventListener('click', function() {
+      let current = document.querySelectorAll(".border");
+
+      if (current.length > 0) {
+        current[0].classList.remove('border');
+      }
+      this.className += " border";
+    })
+  }
+}
+
+// Tippy ========================================================================================================================================================
+
+tippy('[data-tippy-content]');
+
+// Mask for credit card ========================================================================================================================================================
+
+
+if (document.querySelectorAll('.checkout').length > 0) {
+    let ccNumberInput = document.querySelector('.cc-number-input'),
+    ccNumberPattern = /^\d{0,16}$/g,
+    ccNumberSeparator = " ",
+    ccNumberInputOldValue,
+    ccNumberInputOldCursor,
+
+    ccExpiryInput = document.querySelector('.cc-expiry-input'),
+    ccExpiryPattern = /^\d{0,4}$/g,
+    ccExpirySeparator = "/",
+    ccExpiryInputOldValue,
+    ccExpiryInputOldCursor,
+
+    ccCVCInput = document.querySelector('.cc-cvc-input'),
+    ccCVCPattern = /^\d{0,3}$/g,
+
+    mask = (value, limit, separator) => {
+      var output = [];
+      for (let i = 0; i < value.length; i++) {
+        if ( i !== 0 && i % limit === 0) {
+          output.push(separator);
+        }
+
+        output.push(value[i]);
+      }
+
+      return output.join("");
+    },
+    unmask = (value) => value.replace(/[^\d]/g, ''),
+    checkSeparator = (position, interval) => Math.floor(position / (interval + 1)),
+    ccNumberInputKeyDownHandler = (e) => {
+      let el = e.target;
+      ccNumberInputOldValue = el.value;
+      ccNumberInputOldCursor = el.selectionEnd;
+    },
+    ccNumberInputInputHandler = (e) => {
+      let el = e.target,
+          newValue = unmask(el.value),
+          newCursorPosition;
+
+      if ( newValue.match(ccNumberPattern) ) {
+        newValue = mask(newValue, 4, ccNumberSeparator);
+
+        newCursorPosition =
+          ccNumberInputOldCursor - checkSeparator(ccNumberInputOldCursor, 4) +
+          checkSeparator(ccNumberInputOldCursor + (newValue.length - ccNumberInputOldValue.length), 4) +
+          (unmask(newValue).length - unmask(ccNumberInputOldValue).length);
+
+        el.value = (newValue !== "") ? newValue : "";
+      } else {
+        el.value = ccNumberInputOldValue;
+        newCursorPosition = ccNumberInputOldCursor;
+      }
+
+      el.setSelectionRange(newCursorPosition, newCursorPosition);
+
+      highlightCC(el.value);
+    },
+    highlightCC = (ccValue) => {
+      let ccCardType = '',
+          ccCardTypePatterns = {
+            amex: /^3/,
+            visa: /^4/,
+            mastercard: /^5/,
+            disc: /^6/,
+
+            genric: /(^1|^2|^7|^8|^9|^0)/,
+          };
+
+      for (const cardType in ccCardTypePatterns) {
+        if ( ccCardTypePatterns[cardType].test(ccValue) ) {
+          ccCardType = cardType;
+          break;
+        }
+      }
+
+      let activeCC = document.querySelector('.cc-types__img--active'),
+          newActiveCC = document.querySelector(`.cc-types__img--${ccCardType}`);
+
+      if (activeCC) activeCC.classList.remove('cc-types__img--active');
+      if (newActiveCC) newActiveCC.classList.add('cc-types__img--active');
+    },
+    ccExpiryInputKeyDownHandler = (e) => {
+      let el = e.target;
+      ccExpiryInputOldValue = el.value;
+      ccExpiryInputOldCursor = el.selectionEnd;
+    },
+    ccExpiryInputInputHandler = (e) => {
+      let el = e.target,
+          newValue = el.value;
+
+      newValue = unmask(newValue);
+      if ( newValue.match(ccExpiryPattern) ) {
+        newValue = mask(newValue, 2, ccExpirySeparator);
+        el.value = newValue;
+      } else {
+        el.value = ccExpiryInputOldValue;
+      }
+    };
+
+  ccNumberInput.addEventListener('keydown', ccNumberInputKeyDownHandler);
+  ccNumberInput.addEventListener('input', ccNumberInputInputHandler);
+
+  ccExpiryInput.addEventListener('keydown', ccExpiryInputKeyDownHandler);
+  ccExpiryInput.addEventListener('input', ccExpiryInputInputHandler);
+
+  // Transformation order info ========================================================================================================================================================
+
+  new TransferElements(
+    {
+      sourceElement: document.querySelector('.checkout__form-order'),
+      breakpoints: {
+        768: {
+          targetElement: document.querySelector('.checkout__card-info'),
+          targetPosition: 4
+        }
+      }
+    }
+  );
+}
+
+
+// Tabs for business account page ========================================================================================================================================================
+
+const tabButtons = document.querySelectorAll(".tab__links");
+
+    for (let i = 0; i < tabButtons.length; i++) {
+      tabButtons[i].addEventListener("click", function () {
+        let tabContent = document.querySelector('#' + tabButtons[i].dataset.tab)
+        let allTabContent = document.querySelectorAll(".tab__content");
+        let allTabButtons = document.querySelectorAll(".tab__links");
+
+        for (let j = 0; j < allTabContent.length; j++) {
+          allTabContent[j].style.display = "none";
+        }
+
+        for (let k = 0; k < allTabButtons.length; k++) {
+          allTabButtons[k].classList.remove("active");
+        }
+
+        tabContent.style.display = "block";
+        this.classList.add("active");
+
+      });
+    }
+
+    document.querySelector(".tab__links").click();
+
+// Range-slider ========================================================================================================================================================
+
+(function ($) {
+  $(document).ready(function () {
+
+     document.querySelectorAll('.range_slider').forEach(el => {
+        console.log(el);
+        const range = new rSlider({
+          target: el,
+          step: 1,
+          values: {
+            min: 0,
+            max: 11
+          },
+          range: false,
+          tooltip: false,
+          scale: true,
+          labels: true,
+          set: [5]
+        })
+      });
+
+    let totalTime = 3000;
+    let circle = document.getElementById('circle');
+    let timer = totalTime;
+
+    function updateClock() {
+
+      let remainingTime = 0;
+      let interval = 1000;
+      let maxDashOffset = 125.66;
+
+      function update() {
+
+        if (remainingTime < totalTime) {
+          remainingTime += 1;
+          let dashOffset = (remainingTime / totalTime) * maxDashOffset;
+          circle.style.strokeDashoffset = -dashOffset;
+
+          if (timer > 0) {
+            timer -= 1
+            let minutes = Math.floor(timer / 60);
+            let seconds = timer % 60;
+            $('.timer').text(`${minutes}:${seconds < 10 ? '0' : ''}${seconds}`);
+
+          } else {
+            $('.timer').text('00:00')
+          }
+
+        } else {
+          clearInterval(clockInterval)
+        }
+
+      }
+
+      update();
+
+      let clockInterval = setInterval(update, interval);
+
+    }
+
+    if (circle) {
+      updateClock();
+    }
+
+  });
+})(jQuery);

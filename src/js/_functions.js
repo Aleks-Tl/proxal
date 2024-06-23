@@ -44,10 +44,14 @@ const modal = new GraphModal();
 // import 'simplebar';
 
 // Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
+
+
+/* const cvcBtn = document.querySelector('.tooltip__btn'),
+       cvcTooltip = document.querySelector('.tooltip__txt');
+
+createPopper(cvcBtn, cvcTooltip, {
+   placement: 'right'
+}); */
 
 // Подключение свайпера
 // import Swiper, { Navigation, Pagination } from 'swiper';

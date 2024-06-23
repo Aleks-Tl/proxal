@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body business-login">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <h1 class="title-40 title-top">Account details</h1>
+      <section class="account-details">
+        <div class="_container">
+          <div class="account-details__wrap">
+            <div class="account-details__avatar">
+              <img src="img/user-business.jpg" alt="">
+              <label for="edit">
+                <input type="file" name="edit" id="edit">
+                <img src="img/download-icon.svg" alt="">
+              </label>
+            </div>
+            <div class="account-details__form">
+              <form action="#">
+                <h4 class="title-24">Personal info</h4>
+                <div class="account-details__personal-info">
+                  <div>
+                    <label for="businessFirstName">First Name
+                      <input type="text" name="businessFirstName" id="businessFirstName" placeholder="Your First name" required>
+                    </label>
+                    <label for="businessLastName">Last Name
+                      <input type="text" name="businessLastName" id="businessLastName" placeholder="Your Last name" required>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="businessEmail">Email
+                      <input type="email" name="businessEmail" id="businessEmail" placeholder="Your Email" required>
+                    </label>
+                    <label for="businessPhone">Phone
+                      <input type="tel" name="businessPhone" id="businessPhone" placeholder="Your phone" required>
+                    </label>
+                  </div>
+                </div>
+                <h4 class="title-24">Business info</h4>
+                <div class="account-details__personal-info">
+                  <div>
+                    <label for="businessCompany">Company Name
+                      <input type="text" name="businessCompany" id="businessCompany" placeholder="Your Company nmae" required>
+                    </label>
+                    <label for="businessCompanyABN">Company ABN
+                      <input type="text" name="businessCompanyABN" id="businessCompanyABN" placeholder="Your Company ABN" required>
+                    </label>
+                  </div>
+                  <div>
+                    <label for="businessCompanyWebsite">Company Website (optional)
+                      <input type="text" name="businessCompanyWebsite" id="businessCompanyWebsite" placeholder="Your Company Website" required>
+                    </label>
+                    <label for="">
+                      <input type="" name="" id="" placeholder="" required style="display: none;">
+                    </label>
+                  </div>
+                </div>
+                <h4 class="title-24">Address</h4>
+                <div class="account-details__address">
+                  <label for="address">Address
+                    <input type="text" name="address" id="address" placeholder="Your address" required>
+                  </label>
+                    <div>
+                      <label for="state">State
+                        <select name="state" id="state" class="js-choices">
+                          <option value="">State</option>
+                          <option value="1">Sydney</option>
+                          <option value="2">Melbourne</option>
+                          <option value="3">Brisbane</option>
+                          <option value="4">Brisbane</option>
+                          <option value="5">Adelaide</option>
+                          <option value="6">Gold Coast</option>
+                          <option value="7">Cranbourne</option>
+                          <option value="8">Canberra</option>
+                          <option value="9">Central Coast</option>
+                          <option value="10">Wollongong</option>
+                          <option value="11">Sydney</option>
+                          <option value="12">Melbourne</option>
+                          <option value="13">Brisbane</option>
+                          <option value="14">Brisbane</option>
+                          <option value="15">Adelaide</option>
+                          <option value="16">Gold Coast</option>
+                          <option value="17">Cranbourne</option>
+                          <option value="18">Canberra</option>
+                          <option value="19">Central Coast</option>
+                          <option value="20">Wollongong</option>
+                        </select>
+                      </label>
+                      <label for="syburb">Suburb
+                        <input type="text" name="suburb" id="suburb" placeholder="Suburb" required>
+                      </label>
+                      <label for="postcode">Postcode
+                        <input type="number" placeholder="Postcode" name="postcode">
+                      </label>
+                    </div>
+                </div>
+                <h4 class="title-24">Change password</h4>
+                <div class="account-details__passwords">
+                  <label for="password">New password
+                    <div>
+                      <input type="password" name="password" id="password" placeholder="New password" required>
+                      <span></span>
+                    </div>
+                  </label>
+                  <label for="confirmPassword">Confirm new password
+                    <div>
+                      <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm new password" required>
+                      <span></span>
+                    </div>
+                  </label>
+                </div>
+                <input type="submit" class="btn-accept" value="Save changes">
+                <input type="reset" class="btn-cancel" value="Cancel">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
